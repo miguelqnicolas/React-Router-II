@@ -40,6 +40,11 @@ body {
   margin-right: 10px;
 }
 
+.saved-list a {
+  text-decoration: none;
+  color: black;
+}
+
 .saved-movie {
   margin: 0 10px;
 }
@@ -60,6 +65,7 @@ body {
   border: 1px solid grey;
   padding: 5px 10px;
   background-color: lightseagreen;
+  cursor: pointer;
 }
 .save-button:hover {
   background-color: green;
@@ -69,4 +75,9 @@ body {
 .home-button {
   padding: 5px 10px;
   background-color: lightskyblue;
+}
+
+.movie-list a {
+  text-decoration: none;
+  color: black;
 }

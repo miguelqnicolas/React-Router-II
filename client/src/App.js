@@ -8,7 +8,11 @@ const App = () => {
 	const [savedList, setSavedList] = useState([]);
 
 	const addToSavedList = movie => {
-		setSavedList( [...savedList, movie] );
+		if (savedList.find(item => {
+			return movie.id === item.id;
+		}) === undefined) {
+			setSavedList( [...savedList, movie] );
+		}
 	};
 
 	return (
@@ -18,7 +22,7 @@ const App = () => {
 
 				<Route exact path='/' component={MovieList}/>
 				<Route path='/movie/:id' render={props => {
-					return <Movie {...props}/>
+					return <Movie {...props} addToSavedList={addToSavedList}/>
 				}}/>
 			</div>
 		</Router>
